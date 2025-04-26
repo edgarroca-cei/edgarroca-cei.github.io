@@ -1,0 +1,227 @@
+/**
+ * HEADER.CSS
+ * Estilos para el encabezado y la navegación principal
+ * Incluye: Header fijo, menú de navegación y versión responsive para móviles
+ */
+
+/* Contenedor principal del header - Fijo en la parte superior */
+.header {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    color: var(--color-white);
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+}
+
+/* Botón de menú móvil */
+.header__menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 12px;
+    z-index: 101;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.header__menu-button svg {
+    width: 35px;
+    height: 35px;
+    display: block;
+}
+
+/* Navegación principal */
+.nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 50px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, var(--color-nav-gradient) 20%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 90%, 0% 97%);
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.nav__item {
+    padding: 0 25px;
+    position: relative;
+}
+
+.nav__item--home {
+    padding-right: 30px;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__item--home .nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav__link {
+    font-family: 'MorningBreeze', 'Poppins', sans-serif;
+    font-size: 1.35rem;
+    display: inline-block;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+    color: var(--color-white);
+}
+
+.nav__home-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: relative;
+    z-index: 5;
+}
+
+.nav__link:hover {
+    color: #aaa;
+}
+
+/* Media Queries */
+@media (min-width: 1921px) {
+    .header {
+        height: 150px;
+    }
+
+    .nav {
+        height: 150px;
+    }
+
+    .nav__link {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+    .header {
+        height: 120px;
+    }
+
+    .nav {
+        height: 120px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .header {
+        height: 80px;
+    }
+
+    .nav {
+        height: 80px;
+    }
+
+    .nav__link {
+        font-size: 1.2rem;
+    }
+
+    .nav__item {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        justify-content: center;
+    }
+
+    .header__menu-button {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--color-overlay);
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        clip-path: none;
+    }
+
+    .nav--active {
+        display: flex;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav__item {
+        padding: 0;
+    }
+
+    .nav__item--home {
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav__link {
+        font-size: 1.8rem;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .header__menu-button {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    .header__menu-button svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header__menu-button {
+        font-size: 2.3rem;
+        padding: 17px;
+    }
+
+    .header__menu-button svg {
+        width: 48px;
+        height: 48px;
+    }
+}

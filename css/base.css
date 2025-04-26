@@ -1,0 +1,99 @@
+/**
+ * BASE.CSS
+ * Archivo base con variables globales, reset y estilos fundamentales
+ * Contiene: Custom Properties (variables CSS), fuentes personalizadas y reset
+ */
+
+/* Paleta de colores y valores reutilizables */
+:root {
+    /* Colores principales */
+    --color-primary: #f3c466;      /* Amarillo dorado (botones activos) */
+    --color-primary-hover: #d2cd59; /* Amarillo hover (social icons) */
+
+    /* Colores de fondo */
+    --color-black: #000000;        /* Negro (fondo general) */
+    --color-dark-blue: #16232e;    /* Azul oscuro (fondo about) */
+    --color-dark-gray: #1a1a1a;    /* Gris oscuro (fondo hero) */
+
+    /* Colores de texto */
+    --color-white: #ffffff;        /* Blanco (texto general) */
+    --color-gray: #555555;         /* Gris (texto botones) */
+    --color-light-gray: #999999;   /* Gris claro (footer créditos) */
+    --color-tab-inactive: rgba(224, 220, 209, 0.5); /* Tabs inactivas */
+    --color-tab-hover: rgba(224, 220, 209, 0.75);   /* Tabs hover */
+
+    /* Colores de sombras y overlays */
+    --color-shadow: rgba(0, 0, 0, 0.5);      /* Sombra general */
+    --color-shadow-dark: rgba(0, 0, 0, 0.8); /* Sombra oscura */
+    --color-shadow-light: rgba(0, 0, 0, 0.3); /* Sombra ligera */
+    --color-shadow-blue: rgba(10, 21, 32, 0.5); /* Sombra azulada */
+    --color-overlay: rgba(0, 0, 0, 0.95);    /* Overlay modal */
+    --color-nav-gradient: rgba(0, 0, 0, 0.7); /* Gradiente nav */
+    --color-divider: rgba(224, 220, 209, 0.2); /* Divisor tabs */
+}
+
+/* Fuentes personalizadas */
+@font-face {
+    font-family: 'MorningBreeze';
+    src: url('../fonts/morning-breeze-font/MorningBreeze-w19VZ.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MorningBreeze';
+    src: url('../fonts/morning-breeze-font/MorningBreezeBold-7BGeA.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MorningBreeze';
+    src: url('../fonts/morning-breeze-font/MorningBreezeLight-d9BPX.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    line-height: 1.6;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Ocultar elementos visualmente pero mantenerlos accesibles para lectores de pantalla */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

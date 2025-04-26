@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FleshFest</title>
+
+    <!-- Preconexiones para optimizar carga de recursos externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fuentes y recursos externos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Archivos CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/atmosphere.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- JavaScript -->
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+
+    <!-- INICIO: Header y navegación principal -->
+    <header class="header">
+        <div class="header__content">
+            <!-- Botón de menú móvil (visible solo en pantallas pequeñas) -->
+            <button class="header__menu-button" aria-label="Menu" aria-expanded="false" title="Abrir menú de navegación">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </button>
+
+            <!-- Navegación principal -->
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--home">
+                        <a href="#hero" class="nav__link" aria-label="Home" title="Volver al inicio de la página">
+                            <img src="ui/global/bttn_home.png" alt="Botón de inicio para volver a la parte superior de la página" class="nav__home-icon">
+                        </a>
+                    </li>
+                    <li class="nav__item"><a href="#about-game" class="nav__link" title="Ir a la sección Sobre el juego">About</a></li>
+                    <li class="nav__item"><a href="#atmosphere" class="nav__link" title="Ir a la sección Atmósfera">Atmosphere</a></li>
+                    <li class="nav__item"><a href="#media" class="nav__link" title="Ir a la sección Media">Media</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- FIN: Header y navegación principal -->
+
+    <main>
+        <!-- INICIO: Sección Hero (Banner principal) -->
+        <section id="hero" class="hero">
+            <!-- Logo del juego -->
+            <h2 class="visually-hidden">Flesh Fest - Survival Horror Game</h2>
+            <div class="hero__logo-container">
+                <img src="ui/global/flesh-fest-logo.png" alt="Flesh Fest Game Logo" class="hero__game-logo">
+            </div>
+
+            <!-- Contenedor de botones del hero-->
+            <div class="hero__buttons-container">
+                <div class="hero__buttons">
+                    <!-- Botón de Wishlist (Inactivo) -->
+                    <a href="#" class="hero-button hero-button--steam" title="Añadir a lista de deseos en Steam (Próximamente)">
+                        <div class="hero-button__container">
+                            <img src="ui/global/bttn_long_01_g.png" alt="Botón para añadir Flesh Fest a tu lista de deseos en Steam" class="hero-button__img">
+                            <span class="hero-button__text">Wishlist</span>
+                        </div>
+                    </a>
+
+                    <!-- Botón de Kickstarter (Inactivo) -->
+                    <a href="#" class="hero-button hero-button--kick" title="Ver campaña de Kickstarter (Próximamente)">
+                        <div class="hero-button__container">
+                            <img src="ui/global/bttn_long_02_g.png" alt="Botón para acceder a la campaña de Kickstarter de Flesh Fest" class="hero-button__img">
+                            <span class="hero-button__text">Kickstarter</span>
+                        </div>
+                    </a>
+
+                    <!-- Botón de Discord  -->
+                    <a href="https://discord.gg/2dAtMVG8N5" target="_blank" rel="noreferrer" class="hero-button hero-button--discord" title="Unirse al servidor de Discord de Flesh Fest">
+                        <div class="hero-button__container">
+                            <img src="ui/global/bttn_long_03_y.png" alt="Botón para unirse al servidor de Discord de la comunidad de Flesh Fest" class="hero-button__img">
+                            <span class="hero-button__text">Discord</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- FIN: Sección Hero -->
+
+
+        <!-- INICIO: Sección About  -->
+        <section id="about-game" class="about">
+            <h2 class="visually-hidden">About The Game</h2>
+            <div class="about__container">
+                <!-- Columna izquierda: Controles y información del juego -->
+                <div class="about__left">
+                    <!-- Controles de navegación -->
+                    <div class="about__controls">
+                        <!-- Área del título -->
+                        <div class="about__title-area">
+                            <!-- Flecha izquierda con estados (normal, hover, inactivo) -->
+                            <button class="about__arrow about__arrow--left" aria-label="Anterior" title="Ver pestaña anterior">
+                                <img src="ui/global/bttn_arrow_01_y.png" alt="Flecha de navegación izquierda para cambiar a la pestaña anterior" class="about__arrow-img about__arrow-img--left" loading="lazy">
+                                <img src="ui/global/bttn_arrow_01_b.png" alt="Flecha izquierda en estado hover" class="about__arrow-img about__arrow-img--left-hover" loading="lazy">
+                                <img src="ui/global/bttn_arrow_01_g.png" alt="Flecha izquierda en estado inactivo" class="about__arrow-img about__arrow-img--left-inactive" loading="lazy">
+                            </button>
+
+                            <!-- Título de la sección -->
+                            <div class="about__title">
+                                <img src="ui/about/about_the_game.png" alt="Título de la sección: About The Game" class="about__title-img" loading="lazy">
+                            </div>
+
+                            <!-- Flecha derecha con estados (normal, hover, inactivo) -->
+                            <button class="about__arrow about__arrow--right" aria-label="Siguiente" title="Ver pestaña siguiente">
+                                <img src="ui/global/bttn_arrow_01_y.png" alt="Flecha de navegación derecha para cambiar a la pestaña siguiente" class="about__arrow-img about__arrow-img--right" loading="lazy">
+                                <img src="ui/global/bttn_arrow_01_b.png" alt="Flecha derecha en estado hover" class="about__arrow-img about__arrow-img--right-hover" loading="lazy">
+                                <img src="ui/global/bttn_arrow_01_g.png" alt="Flecha derecha en estado inactivo" class="about__arrow-img about__arrow-img--right-inactive" loading="lazy">
+                            </button>
+                        </div>
+
+                        <!-- Pestañas de navegación -->
+                        <div class="about__tabs">
+                            <button class="about__tab-button about__tab-button--active" data-tab="about" title="Ver información general del juego">ABOUT</button>
+                            <span class="about__tab-divider"></span>
+                            <button class="about__tab-button" data-tab="features" title="Ver características del juego">FEATURES</button>
+                        </div>
+                    </div>
+
+                    <!-- Contenido de las pestañas -->
+                    <div class="about__content">
+                        <!-- Contenido de la pestaña About -->
+                        <div class="about__tab-content about__tab-content--active" id="about-content">
+                            <p><i>Flesh Fest</i> is a survival horror action-adventure game focused on exploration, stealth, and puzzles.</p>
+                            <p>You play as <i>Ruby</i>, trapped within a mysterious castle. Overcome puzzles, traps, and monsters including <i>Murray</i>, a grotesque creature hunting you relentlessly. Face challenges in your desperate fight to escape.</p>
+                        </div>
+
+                        <!-- Contenido de la pestaña Features -->
+                        <div class="about__tab-content about__tab-content--features" id="features-content">
+                           <ul>
+                               <li><strong>Explore:</strong> Discover a twisted map in this 2.5D adventure. Wander through castle towers, toxic gardens, and hidden laboratories.</li>
+                               <li><strong>Solve:</strong> Untangle puzzles and riddles that open new paths and uncover the story within the castle.</li>
+                               <li><strong>Hide:</strong> Use stealth to avoid bizarre creatures roaming the castle's corridors.</li>
+                               <li><strong>Fight:</strong> Use tools, weapons and magical runes to your advantage.</li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: Imagen ilustrativa -->
+                <div class="about__right">
+                    <!-- Imagen para ambas pestañas -->
+                    <div class="about__game-image about__game-image--active">
+                        <img src="ui/about/Ilustracion.png" alt="Ilustración del juego" class="about__illustration" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FIN: Sección About -->
+
+        <!-- INICIO: Sección Atmosphere -->
+        <section id="atmosphere" class="atmosphere">
+            <h2 class="visually-hidden">Atmosphere</h2>
+            <!-- Contenedor de la imagen de fondo -->
+            <div class="atmosphere__bg-container">
+                <img src="ui/atmosphere/atmosphere_bg.png" alt="Imagen de fondo atmosférica mostrando el ambiente oscuro y misterioso del juego" class="atmosphere__bg-image" loading="lazy">
+            </div>
+
+            <!-- Contenedor del banner decorativo superior -->
+            <div class="atmosphere__svg-container">
+                <img src="ui/atmosphere/bricks_end.png" alt="Banner decorativo de ladrillos que separa las secciones" class="atmosphere__banner-svg">
+            </div>
+
+            <!-- Contenido principal: título y descripción -->
+            <div class="atmosphere__content">
+                <!-- Título de la sección -->
+                <div class="atmosphere__title-container">
+                    <img src="ui/atmosphere/atmosphere.png" alt="Título de la sección: Atmosphere - Ambiente del juego" class="atmosphere__title-img" loading="lazy">
+                </div>
+
+                <!-- Descripción del ambiente del juego -->
+                <div class="atmosphere__description">
+                    <p>A mysterious adventure through a surreal world of monsters and magic. Inspired by <i>Little Nightmares</i>, <i>Hollow Knight</i>, <i>Ghibli</i> films, and <i>Steven Universe</i>.</p>
+                    <p><i>Flesh Fest</i> features hand-drawn animations and 2.5D backgrounds for enhanced immersion.</p>
+                </div>
+            </div>
+        </section>
+        <!-- FIN: Sección Atmosphere -->
+
+        <!-- INICIO: Sección Media -->
+        <section id="media" class="media">
+            <h2 class="visually-hidden">Media Gallery</h2>
+            <div class="media__gallery">
+                <!-- Encabezado con título y botón de Press Kit (versión desktop) -->
+                <div class="media__header">
+                    <img src="ui/media/media.png" alt="Título de la sección: Media - Galería de imágenes del juego" class="media__title-img" loading="lazy">
+                    <a href="https://drive.google.com/drive/folders/1ajlh38Oqir88htm09UlvVzxlfxH40sW8?usp=sharing" target="_blank" rel="noreferrer" class="hero-button media__press-kit media__press-kit--desktop" title="Descargar Press Kit con materiales promocionales">
+                        <div class="hero-button__container">
+                            <img src="ui/global/bttn_long_03_y.png" alt="Botón para descargar el Press Kit con materiales promocionales del juego" class="hero-button__img" loading="lazy">
+                            <span class="hero-button__text">Press Kit</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cuadrícula de miniaturas de imágenes -->
+                <div class="media__grid">
+                    <!-- Imagen 1 -->
+                    <div class="media__item">
+                        <div class="media__thumbnail media__thumbnail--1"></div>
+                    </div>
+                    <!-- Imagen 2 -->
+                    <div class="media__item">
+                        <div class="media__thumbnail media__thumbnail--2"></div>
+                    </div>
+                    <!-- Imagen 3 -->
+                    <div class="media__item">
+                        <div class="media__thumbnail media__thumbnail--3"></div>
+                    </div>
+                    <!-- Imagen 4 -->
+                    <div class="media__item">
+                        <div class="media__thumbnail media__thumbnail--4"></div>
+                    </div>
+                    <!-- Imagen 5 -->
+                    <div class="media__item">
+                        <div class="media__thumbnail media__thumbnail--5"></div>
+                    </div>
+                    <!-- Imagen 6 -->
+                    <div class="media__item">
+                        <div class="media__thumbnail media__thumbnail--6"></div>
+                    </div>
+                </div>
+
+                <!-- Botón de Press Kit (versión móvil) -->
+                <div class="media__press-kit-container media__press-kit--mobile">
+                    <a href="https://drive.google.com/drive/folders/1ajlh38Oqir88htm09UlvVzxlfxH40sW8?usp=sharing" target="_blank" rel="noreferrer" class="hero-button media__press-kit" title="Descargar Press Kit con materiales promocionales">
+                        <div class="hero-button__container">
+                            <img src="ui/global/bttn_long_03_y.png" alt="Botón para descargar el Press Kit con materiales promocionales del juego" class="hero-button__img" loading="lazy">
+                            <span class="hero-button__text">Press Kit</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Modal para visualizar imágenes ampliadas -->
+            <div id="ampliacion-imagen" class="media__modal">
+                <div class="media__modal-content">
+                    <!-- Contenedor para la imagen ampliada -->
+                    <div id="contenedor-imagen-ampliada" class="media__image-container"></div>
+                    <!-- Botón para cerrar la imagen ampliada -->
+                    <div class="media__close-button-container">
+                        <button class="media__close-button" aria-label="Cerrar imagen" title="Cerrar imagen ampliada">×</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FIN: Sección Media -->
+
+    </main>
+
+    <!-- INICIO: Footer (Pie de página) -->
+    <footer class="footer">
+        <!-- Contenido principal del footer -->
+        <div class="footer__content">
+            <!-- Iconos de redes sociales -->
+            <div class="footer__social-icons">
+                <a href="https://www.instagram.com/FleshFestGame" target="_blank" rel="noreferrer" class="footer__social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/FleshFestGame" target="_blank" rel="noreferrer" class="footer__social-icon"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.threads.com/@fleshfestgame" target="_blank" rel="noreferrer" class="footer__social-icon"><i class="fab fa-threads"></i></a>
+                <a href="https://www.tiktok.com/@fleshfestgame" target="_blank" rel="noreferrer" class="footer__social-icon"><i class="fab fa-tiktok"></i></a>
+            </div>
+
+            <!-- Créditos -->
+            <div class="footer__credits">
+                <p>Site Design & Development by <a href="#" title="Información sobre el desarrollador">Edgar Roca</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- FIN: Footer -->
+
+</body>
+</html>

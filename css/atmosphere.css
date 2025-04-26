@@ -1,0 +1,339 @@
+/**
+ * ATMOSPHERE.CSS
+ * Estilos para la sección "Atmosphere"
+ * Incluye: Imagen de fondo, banner decorativo, título y descripción
+ * con efectos visuales y adaptaciones responsive
+ */
+
+/* Contenedor principal de la sección */
+.atmosphere {
+    background-color: var(--color-black);
+    position: relative;
+    overflow: hidden;
+    margin-top: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor de fondo */
+.atmosphere__bg-container {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.atmosphere__bg-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    min-width: 1200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Contenedor de contenido */
+.atmosphere__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    max-width: 600px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Título */
+.atmosphere__title-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.atmosphere__title-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+/* Descripción */
+.atmosphere__description {
+    width: 100%;
+    color: var(--color-white);
+    text-align: center;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    text-shadow: 0 3px 5px var(--color-shadow-dark), 0 1px 2px var(--color-shadow);
+}
+
+.atmosphere__description p {
+    margin-bottom: 15px;
+}
+
+.atmosphere__description p:last-child {
+    margin-bottom: 0;
+}
+
+/* SVG decorativo */
+.atmosphere__svg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+    overflow: visible;
+    pointer-events: none;
+    margin-top: -1px;
+}
+
+.atmosphere__banner-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0px 15px 5px var(--color-shadow-blue));
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
+    margin-bottom: -1px;
+}
+
+/* Media Queries */
+@media (min-width: 1921px) {
+    .atmosphere__content {
+        width: 35%;
+        max-width: 800px;
+    }
+
+    .atmosphere__title-img {
+        max-width: 90%;
+        width: 90%;
+    }
+
+    .atmosphere__description {
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+    .atmosphere__title-img {
+        max-width: 90%;
+        width: 90%;
+    }
+
+    .atmosphere__description {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .atmosphere__content {
+        width: 38%;
+        max-width: 580px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .atmosphere__content {
+        width: 45%;
+        max-width: 620px;
+        padding-top: 50px;
+    }
+
+    .atmosphere__title-img {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .atmosphere__content {
+        width: 75%;
+        max-width: 700px;
+    }
+
+    .atmosphere__description {
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 740px) {
+    .atmosphere__content {
+        width: 60%;
+        max-width: 650px;
+        transform: translate(-50%, -55%);
+        padding-top: 5px;
+    }
+
+    .atmosphere__title-img {
+        max-width: 80%;
+        width: 80%;
+    }
+
+    .atmosphere__description {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 739px) and (min-width: 650px) {
+    .atmosphere__content {
+        width: 65%;
+        max-width: 620px;
+        transform: translate(-50%, -55%);
+    }
+
+    .atmosphere__title-img {
+        max-width: 85%;
+        width: 85%;
+    }
+
+    .atmosphere__description {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 649px) and (min-width: 580px) {
+    .atmosphere__content {
+        width: 70%;
+        max-width: 600px;
+        transform: translate(-50%, -55%);
+    }
+
+    .atmosphere__title-img {
+        max-width: 85%;
+        width: 85%;
+    }
+
+    .atmosphere__description {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 579px) and (min-width: 481px) {
+    .atmosphere__content {
+        width: 65%;
+        max-width: 550px;
+        transform: translate(-50%, -55%);
+    }
+
+    .atmosphere__title-img {
+        max-width: 85%;
+        width: 85%;
+    }
+
+    .atmosphere__description {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 426px) {
+    .atmosphere__content {
+        width: 75%;
+        max-width: 700px;
+        transform: translate(-50%, -55%);
+    }
+
+    .atmosphere__title-img {
+        max-width: 90%;
+        width: 90%;
+        transform: scale(1.1);
+    }
+
+    .atmosphere__description {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .atmosphere__bg-image {
+        min-width: 1200px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 425px) {
+    .atmosphere__content {
+        width: 85%;
+        max-width: 800px;
+        top: 50%;
+    }
+
+    .atmosphere__title-img {
+        max-width: 100%;
+        width: 100%;
+        transform: scale(1.2);
+        margin-bottom: 0;
+    }
+
+    .atmosphere__description {
+        margin-top: -10px;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .atmosphere__bg-image {
+        min-width: 1200px;
+    }
+}
+
+@media (max-width: 320px) {
+    .atmosphere__content {
+        width: 95%;
+        max-width: 800px;
+    }
+
+    .atmosphere__title-img {
+        transform: scale(1.4);
+    }
+
+    .atmosphere__description {
+        margin-top: -20px;
+        font-size: 1.15rem;
+        line-height: 1.3;
+    }
+
+    .atmosphere__bg-image {
+        min-width: 1400px;
+    }
+}
+
+/* Reglas específicas para iPhone */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3),
+       only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
+    .atmosphere__svg-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 10;
+        overflow: visible;
+        pointer-events: none;
+        margin-top: 0;
+    }
+
+    .atmosphere__banner-svg {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
